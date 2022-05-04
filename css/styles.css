@@ -502,7 +502,7 @@ p {
 
 .contact {
   list-style: none;
-  t display: flex;
+  display: flex;
   flex-direction: column;
   padding: 0px;
 
@@ -578,6 +578,29 @@ p {
 
 .futer-icon {
   fill: currentColor;
+}
+
+.futer-form {
+  margin-left: 93px;
+}
+
+.futer-form-field {
+  display: flex;
+  justify-content: center;
+}
+
+.futer-form-title {
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.futer-submit-button {
+  margin-left: 12px;
 }
 
 /* portfolio */
