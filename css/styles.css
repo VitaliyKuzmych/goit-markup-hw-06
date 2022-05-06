@@ -586,6 +586,7 @@ p {
 
 .futer-form-field {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -600,7 +601,17 @@ p {
 }
 
 .futer-submit-button {
+  position: relative;
   margin-left: 12px;
+  min-width: auto;
+}
+
+.futer-form-icon {
+  position: absolute;
+  top: 100;
+  left: 100;
+  transform: translate(-40%, -40%);
+  margin-left: 20px;
 }
 
 /* portfolio */
@@ -608,7 +619,6 @@ p {
 .works a {
   list-style: none;
   text-decoration: none;
-
 }
 
 .works {
