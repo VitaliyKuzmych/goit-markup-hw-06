@@ -586,7 +586,6 @@ p {
 
 .futer-form-field {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -601,18 +600,40 @@ p {
 }
 
 .futer-submit-button {
-  position: relative;
-  margin-left: 12px;
-  min-width: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: none;
+  color: var(--secondary-text-color);
+  padding: 10px 10px 10px 29px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .futer-form-icon {
-  position: absolute;
-  top: 100;
-  left: 100;
-  transform: translate(-40%, -40%);
-  margin-left: 20px;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  margin-right: 13px;
 }
+
+.futer-form-input {
+  padding: 15px 16px;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--third-bg-color);
+  color: rgba(255, 255, 255, 0.6);
+}
+
 
 /* portfolio */
 
@@ -760,12 +781,17 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   background-color: var(--primery-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .close-icon {
+  position: absolute;
   margin: 8px 8px 543px 490px;
   width: 30px;
   height: 30px;
@@ -776,4 +802,159 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon:hover,
+.close-icon:focus {
+  fill: var(--accent-color);
+}
+
+.form {
+  margin: ;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  position: absolute;
+  margin: 40px 40px 0px 40px;
+  text-align: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.modal-form {
+  margin: 75px 40px 0px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  margin-bottom: 14px;
+  padding: 0px;
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+  border: 1px solid #2196F3;
+}
+
+.form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--title-text-color);
+}
+
+.form-field textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea:focus {
+  border: 1px solid #2196F3;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field:focus-within .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  transform: translateY(100%);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.submit-form {
+  margin-left: 125px;
+  width: 200px;
+  height: 50px;
+  background: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.checkbox-form {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.checkbox-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color)
+}
+
+.checkbox-title a {
+  color: var(--accent-color);
+}
+
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked+.checkbox-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
 }
