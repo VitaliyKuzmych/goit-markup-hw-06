@@ -897,15 +897,18 @@ textarea:focus {
   fill: var(--accent-color);
 }
 
+.form-input-icon {
+  position: relative;
+}
+
 .form-icon {
   position: absolute;
-  top: 11px;
-  left: 12px;
-  transform: translateY(100%);
+  top: 45%;
+  left: 5%;
+  transform: translate(-50%, -50%);
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .submit-form {
@@ -918,11 +921,13 @@ textarea:focus {
 }
 
 .checkbox-form {
+  position: relative;
   margin-top: 15px;
   margin-bottom: 30px;
 }
 
 .checkbox-title {
+  margin-left: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -939,6 +944,10 @@ textarea:focus {
 }
 
 .checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translate(-50%, -50%);
   display: inline-block;
   width: 15px;
   height: 15px;
