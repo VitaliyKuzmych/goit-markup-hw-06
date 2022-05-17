@@ -1,4 +1,5 @@
 {
   "prettier.arrowParens": "always",
-  "prettier.embeddedLanguageFormatting": "off"
+  "prettier.embeddedLanguageFormatting": "off",
+  "liveServer.settings.port": 5501
 }
